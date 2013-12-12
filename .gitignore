@@ -1,6 +1,23 @@
-*.class
+public boolean contains(String[] arr1, String[] arr2)
+  {
+  int arr1Ck;
 
-# Package Files #
-*.jar
-*.war
-*.ear
+  int arr2Ck= 0;
+
+  if(arr2.length > arr1.length)
+     return false;
+
+  for(arr1Ck = 0; arr2Ck < arr2.length; arr1Ck++)
+  {
+    if(arr1[arr1Ck].equals(arr2[arr2Ck]))
+    {
+      arr2Ck++;
+    }
+    else
+    {
+      if(arr1.length-arr1Ck <= arr2.length)
+        return false;
+    }  
+  }
+  return true;
+}
